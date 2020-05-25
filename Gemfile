@@ -4,7 +4,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.0'
+# TODO: Switch back to stable Rails when 6.1 is released in order to get proxying working.
+# gem 'rails', '~> 6.0.0'
+gem 'rails', github: 'rails/rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server

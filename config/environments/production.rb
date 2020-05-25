@@ -42,7 +42,7 @@ Rails.application.configure do
   # Store uploaded files on S3-compatible storage (see config/storage.yml for options)
   if ENV['USE_MINIO'].present?
     config.active_storage.service = :minio
-    config.active_storage.delivery_method = :proxy
+    config.active_storage.resolve_model_to_route = :rails_storage_proxy
   else
     config.active_storage.service = :amazon
   end
